@@ -1,7 +1,7 @@
 # Projeto-Banco
 Meu primeiro projeto em Python da Faculdade!
 
-● Projeto da matéria CC1612 - FUNDAMENTOS DE ALGORITMOS, primeiro semestre (Individual).
+● Projeto da matéria CC1612 - FUNDAMENTOS DE ALGORITMOS (Individual).
 
 Objetivo - Criar um sistema de banco em Python com as seguintes ações:
 Criar conta;
