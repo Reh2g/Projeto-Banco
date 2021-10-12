@@ -239,7 +239,7 @@ def depositar():
         arquivo.write('%s\n' % tipo)
         arquivo.write('%.2f\n' % valorDepositar)
         arquivo.write('Deposito')
-        arquivo.write(data.strftime('\n%d/%m/%Y %H:%M:%S'))
+        arquivo.write(data.strftime('\n%d/%m/%Y %H:%M:%S\n'))
         arquivo.write('0.00')
         arquivo.close()
         print('\n★ Dinheiro depositado com sucesso!\n')
