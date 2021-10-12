@@ -58,6 +58,7 @@ def apagarConta():
         confirmaSenha = confirmaSenha.rstrip('\n')
         arquivo.close()
         senhaInput = input('Digite sua senha: ')
+        
         if senhaInput == confirmaSenha:
             confirmacao = input('Digite sua senha para prosseguir (DELETAR SUA CONTA É UMA AÇÃO IRREVERSÍVEL): ')
             if confirmacao == senhaInput:
@@ -100,6 +101,7 @@ def debitar():
         valorInicial = float(valor)
         arquivo.close()
         senhaInput = input('Digite sua senha: ')
+        
         if senhaInput == confirmaSenha:
             valorDebitar = float(input('Digite o valor que você deseja retirar: '))
             if tipo == '1':
