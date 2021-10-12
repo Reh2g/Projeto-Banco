@@ -246,7 +246,7 @@ def depositar():
         input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
     else:
         print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
-        print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')
+        print('\n¡ERRO! O CPF está incorreto...')
         input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
 
     print('\n︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
