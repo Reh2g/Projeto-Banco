@@ -113,7 +113,7 @@ def debitar():
                 else:
                     contador = 1
                     contadorStr = str(contador)
-                    while os.path.isfile(confirmaCPF + contadorStr + '.txt'):
+                    while os.path.isfile(confirmaCPF + '(' + contadorStr + ')' + '.txt'):
                         contador += 1
                         contadorStr = str(contador)
 
@@ -142,7 +142,7 @@ def debitar():
                 else:
                     contador = 1
                     contadorStr = str(contador)
-                    while os.path.isfile(confirmaCPF + contadorStr + '.txt'):
+                    while os.path.isfile(confirmaCPF + '(' + contadorStr + ')' + '.txt'):
                         contador += 1
                         contadorStr = str(contador)
 
