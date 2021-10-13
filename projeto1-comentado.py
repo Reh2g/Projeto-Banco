@@ -34,6 +34,7 @@ def criarConta():                                                               
         arquivo.write(data.strftime('\n%d/%m/%Y %H:%M:%S\n'))
         arquivo.write('0.00')
         arquivo.close()
+        print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
         print('\n★ Conta criada com sucesso!\n')
         input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
 
@@ -66,11 +67,20 @@ def apagarConta():                                                              
                 for contadorDel in range(contadorDel, -1, -1):                              # Contador para deletar a conta (todos os arquivos .txt, do mais recente ao mais antigo).
                     contadorStrDel = str(contadorDel)
                     os.remove(confirmaCPF + '(' + contadorStrDel + ')' + '.txt')
+                print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
                 print('\n★ Conta deletada com sucesso!\n')
                 input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
+            else:
+                print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
+                print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')                                                  # Define erro caso CPF e/ou senha estiverem incorretos.
+                input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
+        else:
+            print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
+            print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')
+            input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
     else:
         print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
-        print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')                                                          # Define erro caso CPF e/ou senha estiverem incorretos.
+        print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')
         input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
 
     print('\n︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
@@ -131,6 +141,7 @@ def debitar():                                                                  
                     arquivo.write(data.strftime('\n%d/%m/%Y %H:%M:%S\n'))
                     arquivo.write('%.2f\n' % tarifa)
                     arquivo.close()
+                    print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
                     print('\n★ Dinheiro debitado com sucesso!\n')
                     input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
             elif tipo == '2':                                                                                                                   # Verifica se a conta é tipo: Comum.
@@ -160,6 +171,7 @@ def debitar():                                                                  
                     arquivo.write(data.strftime('\n%d/%m/%Y %H:%M:%S\n'))
                     arquivo.write('%.2f\n' % tarifa)
                     arquivo.close()
+                    print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
                     print('\n★ Dinheiro debitado com sucesso!\n')
                     input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
             elif tipo == '3':                                                                                                                    # Verifica se a conta é tipo: Plus.
@@ -189,11 +201,16 @@ def debitar():                                                                  
                     arquivo.write(data.strftime('\n%d/%m/%Y %H:%M:%S\n'))
                     arquivo.write('%.2f\n' % tarifa)
                     arquivo.close()
+                    print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
                     print('\n★ Dinheiro debitado com sucesso!\n')
                     input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
+        else:
+            print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
+            print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')                                                     # Define erro caso CPF e/ou senha estiverem incorretos.
+            input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
     else:
         print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
-        print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')                                                         # Define erro caso CPF e/ou senha estiverem incorretos.
+        print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')
         input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
 
     print('\n︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
@@ -244,6 +261,7 @@ def depositar():                                                                
         arquivo.write(data.strftime('\n%d/%m/%Y %H:%M:%S\n'))
         arquivo.write('0.00')
         arquivo.close()
+        print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
         print('\n★ Dinheiro depositado com sucesso!\n')
         input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
     else:
@@ -276,12 +294,17 @@ def saldo():                                                                    
         senhaInput = input('Digite sua senha: ')                                                                                                                       # Input senha.
 
         if senhaInput == confirmaSenha:                                                                                                  # Verifica se a senha input é igual a senha.
+            print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
             print('\n★ Seu saldo atual é de: R$ %s\n' % valor)                                                                         # Mostra o saldo do arquivo .txt mais recente.
             input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
         else:
             print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
             print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')                                                      # Define erro caso CPF e/ou senha estiverem incorretos.
             input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
+    else:
+        print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
+        print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')
+        input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
 
     print('\n︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
 
@@ -339,10 +362,14 @@ def extrato():                                                                  
                     print('%s | - %s ; Tarifa: %s ➔  Saldo: %s' %(dataEhora, valorAcao, tarifa, valor))
                 elif tipoAcao == 'Deposito' or tipoAcao == 'Criar Conta':                                                           # Verifica se a ação foi Deposito ou Criar conta.
                     print('%s | + %s ; Tarifa: %s ➔  Saldo: %s' %(dataEhora, valorAcao, tarifa, valor))
-        input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
+            input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
+        else:                                                                                                                 # Define erro caso CPF e/ou senha estiverem incorretos.
+            print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
+            print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')
+            input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
     else:
         print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
-        print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')                                                          # Define erro caso CPF e/ou senha estiverem incorretos.
+        print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')
         input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
 
     print('\n︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
@@ -359,6 +386,8 @@ def main():                                                                     
         print('4 - Deposito')
         print('5 - Saldo')
         print('6 - Extrato')
+        print('\n0 - Sair')
+
 
         escolha = input('\nEscolha uma das opções acima: ')
 
@@ -391,4 +420,7 @@ def main():                                                                     
             print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
             print('\n★ 『Extrato』★\n')
             extrato()                                                                                                                                     # Aciona a função: extrato.
+
+        if escolha == '0':
+            pass
 main()
