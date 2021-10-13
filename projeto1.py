@@ -69,6 +69,14 @@ def apagarConta():
                 print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
                 print('\n★ Conta deletada com sucesso!\n')
                 input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
+            else:
+                print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
+                print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')
+                input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
+        else:
+            print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
+            print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')
+            input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
     else:
         print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
         print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')
@@ -194,6 +202,10 @@ def debitar():
                     print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
                     print('\n★ Dinheiro debitado com sucesso!\n')
                     input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
+        else:
+            print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
+            print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')
+            input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
     else:
         print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
         print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')
@@ -287,6 +299,10 @@ def saldo():
             print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
             print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')
             input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
+    else:
+        print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
+        print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')
+        input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
 
     print('\n︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
 
@@ -343,7 +359,11 @@ def extrato():
                     print('%s | - %s ; Tarifa: %s ➔  Saldo: %s' %(dataEhora, valorAcao, tarifa, valor))
                 elif tipoAcao == 'Deposito' or tipoAcao == 'Criar Conta':
                     print('%s | + %s ; Tarifa: %s ➔  Saldo: %s' %(dataEhora, valorAcao, tarifa, valor))
-        input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
+            input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
+        else:
+            print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
+            print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')
+            input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
     else:
         print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
         print('\n¡ERRO! Seu CPF e/ou sua senha estão incorretos...')
