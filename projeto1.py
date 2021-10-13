@@ -34,6 +34,7 @@ def criarConta():
         arquivo.write(data.strftime('\n%d/%m/%Y %H:%M:%S\n'))
         arquivo.write('0.00')
         arquivo.close()
+        print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
         print('\n★ Conta criada com sucesso!\n')
         input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
 
@@ -58,7 +59,6 @@ def apagarConta():
         confirmaSenha = confirmaSenha.rstrip('\n')
         arquivo.close()
         senhaInput = input('Digite sua senha: ')
-        
         if senhaInput == confirmaSenha:
             confirmacao = input('Digite sua senha para prosseguir (DELETAR SUA CONTA É UMA AÇÃO IRREVERSÍVEL): ')
             if confirmacao == senhaInput:
@@ -66,6 +66,7 @@ def apagarConta():
                 for contadorDel in range(contadorDel, -1, -1):
                     contadorStrDel = str(contadorDel)
                     os.remove(confirmaCPF + '(' + contadorStrDel + ')' + '.txt')
+                print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
                 print('\n★ Conta deletada com sucesso!\n')
                 input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
     else:
@@ -101,7 +102,6 @@ def debitar():
         valorInicial = float(valor)
         arquivo.close()
         senhaInput = input('Digite sua senha: ')
-        
         if senhaInput == confirmaSenha:
             valorDebitar = float(input('Digite o valor que você deseja retirar: '))
             if tipo == '1':
@@ -115,7 +115,7 @@ def debitar():
                 else:
                     contador = 1
                     contadorStr = str(contador)
-                    while os.path.isfile(confirmaCPF + '(' + contadorStr + ')' + '.txt'):
+                    while os.path.isfile(confirmaCPF + contadorStr + '.txt'):
                         contador += 1
                         contadorStr = str(contador)
 
@@ -131,6 +131,7 @@ def debitar():
                     arquivo.write(data.strftime('\n%d/%m/%Y %H:%M:%S\n'))
                     arquivo.write('%.2f\n' % tarifa)
                     arquivo.close()
+                    print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
                     print('\n★ Dinheiro debitado com sucesso!\n')
                     input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
             elif tipo == '2':
@@ -144,7 +145,7 @@ def debitar():
                 else:
                     contador = 1
                     contadorStr = str(contador)
-                    while os.path.isfile(confirmaCPF + '(' + contadorStr + ')' + '.txt'):
+                    while os.path.isfile(confirmaCPF + contadorStr + '.txt'):
                         contador += 1
                         contadorStr = str(contador)
 
@@ -160,6 +161,7 @@ def debitar():
                     arquivo.write(data.strftime('\n%d/%m/%Y %H:%M:%S\n'))
                     arquivo.write('%.2f\n' % tarifa)
                     arquivo.close()
+                    print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
                     print('\n★ Dinheiro debitado com sucesso!\n')
                     input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
             elif tipo == '3':
@@ -189,6 +191,7 @@ def debitar():
                     arquivo.write(data.strftime('\n%d/%m/%Y %H:%M:%S\n'))
                     arquivo.write('%.2f\n' % tarifa)
                     arquivo.close()
+                    print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
                     print('\n★ Dinheiro debitado com sucesso!\n')
                     input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
     else:
@@ -244,6 +247,7 @@ def depositar():
         arquivo.write(data.strftime('\n%d/%m/%Y %H:%M:%S\n'))
         arquivo.write('0.00')
         arquivo.close()
+        print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
         print('\n★ Dinheiro depositado com sucesso!\n')
         input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
     else:
@@ -276,6 +280,7 @@ def saldo():
         senhaInput = input('Digite sua senha: ')
 
         if senhaInput == confirmaSenha:
+            print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
             print('\n★ Seu saldo atual é de: R$ %s\n' % valor)
             input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
         else:
@@ -358,6 +363,7 @@ def main():
         print('4 - Deposito')
         print('5 - Saldo')
         print('6 - Extrato')
+        print('\n0 - Sair')
 
         escolha = input('\nEscolha uma das opções acima: ')
 
@@ -390,4 +396,7 @@ def main():
             print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
             print('\n★ 『Extrato』★\n')
             extrato()
+
+        if escolha == '0':
+            pass
 main()
