@@ -34,7 +34,7 @@ def criarConta():
         arquivo.write(data.strftime('\n%d/%m/%Y %H:%M:%S\n'))
         arquivo.write('0.00')
         arquivo.close()
-        print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
+        print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
         print('\n★ Conta criada com sucesso!\n')
         input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
 
@@ -66,7 +66,7 @@ def apagarConta():
                 for contadorDel in range(contadorDel, -1, -1):
                     contadorStrDel = str(contadorDel)
                     os.remove(confirmaCPF + '(' + contadorStrDel + ')' + '.txt')
-                print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
+                print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
                 print('\n★ Conta deletada com sucesso!\n')
                 input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
             else:
@@ -139,7 +139,7 @@ def debitar():
                     arquivo.write(data.strftime('\n%d/%m/%Y %H:%M:%S\n'))
                     arquivo.write('%.2f\n' % tarifa)
                     arquivo.close()
-                    print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
+                    print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
                     print('\n★ Dinheiro debitado com sucesso!\n')
                     input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
             elif tipo == '2':
@@ -169,7 +169,7 @@ def debitar():
                     arquivo.write(data.strftime('\n%d/%m/%Y %H:%M:%S\n'))
                     arquivo.write('%.2f\n' % tarifa)
                     arquivo.close()
-                    print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
+                    print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
                     print('\n★ Dinheiro debitado com sucesso!\n')
                     input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
             elif tipo == '3':
@@ -199,7 +199,7 @@ def debitar():
                     arquivo.write(data.strftime('\n%d/%m/%Y %H:%M:%S\n'))
                     arquivo.write('%.2f\n' % tarifa)
                     arquivo.close()
-                    print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
+                    print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
                     print('\n★ Dinheiro debitado com sucesso!\n')
                     input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
         else:
@@ -259,7 +259,7 @@ def depositar():
         arquivo.write(data.strftime('\n%d/%m/%Y %H:%M:%S\n'))
         arquivo.write('0.00')
         arquivo.close()
-        print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
+        print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
         print('\n★ Dinheiro depositado com sucesso!\n')
         input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
     else:
@@ -292,7 +292,7 @@ def saldo():
         senhaInput = input('Digite sua senha: ')
 
         if senhaInput == confirmaSenha:
-            print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿\n')
+            print('︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿︵‿')
             print('\n★ Seu saldo atual é de: R$ %s\n' % valor)
             input('\n(Entre com qualquer tecla para voltar ao Menu)\n\n')
         else:
